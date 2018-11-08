@@ -14,5 +14,5 @@ array[1]: 6 <=> array[2]: 9
 After insertion sort:
 5 6 9 12 13 
 ```
-Time Complexity: O(n^2)
+Time Complexity: O(n^2)<br>
 Auxiliary Space: O(1)
