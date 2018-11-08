@@ -1,5 +1,5 @@
 # Algorithms
-Inserton Sort
+Inserton Sort:
 ```java
 Before insertion sort:
 12 9 13 5 6 
@@ -14,3 +14,5 @@ array[1]: 6 <=> array[2]: 9
 After insertion sort:
 5 6 9 12 13 
 ```
+Time Complexity: O(n^2)
+Auxiliary Space: O(1)
