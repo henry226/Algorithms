@@ -1,1 +1,2 @@
 # Algorithms
+Inserton Sort
