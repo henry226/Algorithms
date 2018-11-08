@@ -20,9 +20,7 @@ public class InsertionSort {
 	
 	// Implment insert sort here
 	public static int[] insertSort(int[] array) {
-		int n = array.length;
-		
-		for(int i=1; i<n; i++) {
+		for(int i=1; i<array.length; i++) {
 			int key = i-1; // key is previous index of array[i]
 			int index = i; // index is the current array[i]
 			
