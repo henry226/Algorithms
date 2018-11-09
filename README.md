@@ -14,9 +14,11 @@ array[1]: 6 <=> array[2]: 9
 After insertion sort:
 5 6 9 12 13 
 ```
-Time Complexity: O(n^2)<br>
+Time Complexity: O(n^2)  
 Auxiliary Space: O(1)  
+
 ---  
+
 MergeSort:  
 ```java
 Before merge sort: 7 9 1 5 6 4 
