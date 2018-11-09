@@ -44,15 +44,67 @@ public class MergeSort {
 			System.out.print(leftArray[i] + " ");
 		}
 		
-		System.out.print("\nThe right array: ");
+		System.out.print("The right array: ");
 		// stored the rightArray from array
 		for(int i=middleNumber; i<n; i++) {
 			rightArray[i-middleNumber] = array[i];
 			System.out.print(rightArray[i-middleNumber] + " ");
 		}
+		System.out.println("");
 		
+		int[] res = new int[array.length];
+		
+		// recrusive call mergeSort method
+		leftArray = mergeSort(leftArray);
+		rightArray = mergeSort(rightArray);
+		
+		// Do the merge(swap) operation here
+		res = merge(leftArray, rightArray);
+		
+		return res;
+	}
+	
+	public static int[] merge(int[] leftArray, int[] rightArray) {
+		// left, right, result pointers
+		int left, right, res;
+		left = right = res = 0;
+		// left, right array length
+		int leftLength = leftArray.length;
+		int rightLength = rightArray.length;
+		
+		int[] result = new int[leftLength + rightLength];
+		
+		// Make sure there are at least one element in left or right array
+		while(left < leftLength || right < rightLength) {
+			// If there are elements in both left and right array
+			if(left < leftLength && right < rightLength) {
+				// if left is greater, store in result
+				if(leftArray[left] < rightArray[right]) {
+					result[res++] = leftArray[left++];
+				}
+				// if right is greater, store in result
+				else {
+					result[res++] = rightArray[right++];
+				}
+			} 
+			// if there are only items in left array
+			else if(left < leftLength) {
+				result[res++] = leftArray[left++];
+			}
+			// if there are only items in right array
+			else if(right < rightLength) {
+				result[res++] = rightArray[right++];
+			}
+			
+		}
+		// Outoupt the operation
+		System.out.print("Result: ");
+		for(int r : result) {
+			System.out.print(r + " ");
+		}
 		System.out.println();
-		return array;
+		
+		return result;
 	}
 
 }
