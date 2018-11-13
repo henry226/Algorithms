@@ -19,7 +19,7 @@ Auxiliary Space: O(1)
 
 ---  
 
-MergeSort:  
+Merge Sort:  
 ```java
 Before merge sort: 7 9 1 5 6 4 
 Sorting...
